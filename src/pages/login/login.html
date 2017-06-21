@@ -3,6 +3,5 @@
     <div> {{ (user | async)?.displayName }} </div>
     <div> {{ (user | async)?.email }} </div>
     <button class = "facebookLogin" (click)="login()">FacebookLogin</button>
-    <button class = "googleLogin" (click)="login()">Google Login</button>
     <button (click)="logout()">Logout</button>
 </ion-content>
