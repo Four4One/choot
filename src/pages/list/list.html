@@ -14,6 +14,7 @@
   <h2>13 groups, Sunday 21 June</h2>
 
 <ion-content>
+
     <div class="addbrick">
 
         <span class="createinput" [hidden]="!createinput">
@@ -33,7 +34,19 @@
     </div>
 
     <br />
-    <span class="sidetext">192</span><div class="slidebrick"><span class="bricktext">Interface Design Thinking</span></div>
-    <br />
-    <span class="sidetext">520</span><div class="slidebrick"><span class="bricktext">Exploring Sketch</span></div>
+
+    <ion-list>
+      <span class="sidetext" [hidden]="showcount">192</span>
+      
+      <ion-item-sliding #item (ionDrag)="hidesidetext($event)">
+        <ion-item class="slidingitem">
+          <span class="bricktext">Interface Design Thinking</span>
+        </ion-item>
+
+        <ion-item-options class="sliderpart" side="right">
+          <button ion-button (click)="unread(item)">Leave Group</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
 </ion-content>

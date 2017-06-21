@@ -10,9 +10,11 @@ export class ListPage {
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
   createinput: boolean;
+  showcount: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.createinput = false
+    this.showcount = false
 
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
@@ -48,5 +50,14 @@ export class ListPage {
 
   addgroup(groupname) {
       console.log(groupname.value)
+  }
+
+  hidesidetext(){
+    if(this.showcount){
+      this.showcount = false
+    }else{
+      this.showcount = true
+    }  
+    
   }
 }
