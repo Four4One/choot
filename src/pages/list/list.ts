@@ -18,7 +18,7 @@ export class ListPage {
         console.log("No rooms here");
       }
       for(var i = 0; i < snapshot.val().length; i++){
-	       this.rooms.push(snapshot.val()[i]);
+	       this.rooms.push(snapshot.val()[i])
       }
 	  });
   }
