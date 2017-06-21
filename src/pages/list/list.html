@@ -1,19 +1,14 @@
-<!-- <ion-header>
+<ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>List</ion-title>
   </ion-navbar>
-</ion-header> -->
-<button class="specialmenu" menuToggle>
-  <ion-icon name="menu"></ion-icon>
-</button>
-    
-  <h1>Groups <a href="#">today.</a></h1>
-  <h2>13 groups, Sunday 21 June</h2>
+</ion-header>
 
 <ion-content>
+<<<<<<< HEAD
 
     <div class="addbrick">
 
@@ -49,4 +44,18 @@
       </ion-item-sliding>
     </ion-list>
 
+=======
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-icon [name]="item.icon" item-left></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+      </div>
+    </button>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+>>>>>>> da1ae56e3af1d1cd0b26163f19e7e009636483aa
 </ion-content>
