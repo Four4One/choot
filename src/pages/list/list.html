@@ -14,7 +14,7 @@
   <h2>13 groups, Sunday 21 June</h2>
 
 <ion-content>
-    <div class="addbrick"><span class="addtext"><span class="babycircle"><ion-icon name="add"></ion-icon></span> Create Group</span></div>
+    <div class="addbrick" (click)="togglecreateinput()"><span *ngIf="createinput" class="createinput"><span  (click)="untogglecreateinput()"><ion-icon name="close" style="color: #e74c3c"></ion-icon></span><input type="text" placeholder="Group Name..." class="creategroup" /><ion-icon name="checkmark" style="color: #2ecc71"></ion-icon></span> <span class="addtext" *ngIf="!createinput"><span class="babycircle"><ion-icon name="add"></ion-icon></span> Create Group</span></div>
     <br />
     <span class="sidetext">192</span><div class="slidebrick"><span class="bricktext">Interface Design Thinking</span></div>
     <br />
