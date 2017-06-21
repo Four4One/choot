@@ -9,8 +9,11 @@ export class ListPage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
+  createinput: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.createinput = false
+
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
@@ -33,5 +36,13 @@ export class ListPage {
     this.navCtrl.push(ListPage, {
       item: item
     });
+  }
+
+  togglecreateinput() {
+    this.createinput = true  
+  }
+
+  untogglecreateinput() {
+      this.createinput = false
   }
 }
