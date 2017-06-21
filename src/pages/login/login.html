@@ -1,7 +1,9 @@
-<ion-content>
+<ion-content class="bg">
     <div> {{ (user | async)?.uid }} </div>
     <div> {{ (user | async)?.displayName }} </div>
     <div> {{ (user | async)?.email }} </div>
-    <button class = "facebookLogin" (click)="login()">FacebookLogin</button>
-    <button (click)="logout()">Logout</button>
+    <button class = "facebookLogin" (click)="login()">Login with Facebook</button>
+    <p class = "loginDetails">This will take you to the facebook login</p>
+    <p class = "loginDetails2">By logging in you agree to our terms and conditions</p>
+    <ion-icon class="loginIcon" name="chatboxes" (click)="logout()"></ion-icon>
 </ion-content>
