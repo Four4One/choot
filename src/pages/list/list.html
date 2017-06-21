@@ -1,23 +1,22 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>List</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
+<button class="specialmenu" menuToggle>
+  <ion-icon name="menu"></ion-icon>
+</button>
+    
+  <h1>Groups <a href="#">today.</a></h1>
+  <h2>13 groups, Sunday 21 June</h2>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+    <div class="addbrick"><span class="addtext"><span class="babycircle"><ion-icon name="add"></ion-icon></span> Create Group</span></div>
+    <br />
+    <span class="sidetext">192</span><div class="slidebrick"><span class="bricktext">Interface Design Thinking</span></div>
+    <br />
+    <span class="sidetext">520</span><div class="slidebrick"><span class="bricktext">Exploring Sketch</span></div>
 </ion-content>
