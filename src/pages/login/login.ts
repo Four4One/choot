@@ -16,18 +16,22 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public afAuth: AngularFireAuth, public db: AngularFireDatabase) {
     this.user = afAuth.authState;
-
-
+    if (this.user != null) {
+      this.navCtrl.setRoot(ListPage);
+    }
   }
 
   login() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(
-      function() {
+    this.afAuth.auth
+      .signInWithPopup(new firebase.auth.FacebookAuthProvider())
+      .then((result) => {
+        this.navCtrl.setRoot(ListPage);
+        console.log("test");
 
-        this.navCtrl.push(ListPage);
-      }
-    );
+      });
+
   }
+
 
   logout() {
     this.afAuth.auth.signOut();
