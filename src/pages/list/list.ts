@@ -43,6 +43,10 @@ export class ListPage {
   }
 
   untogglecreateinput() {
-      this.createinput = false
+    this.createinput = false
+  }
+
+  addgroup(groupname) {
+      console.log(groupname.value)
   }
 }
