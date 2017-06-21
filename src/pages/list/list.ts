@@ -11,7 +11,6 @@ import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable,
 export class ListPage {
   items: FirebaseObjectObservable<any>;
   rooms: Array<{name:string}>;
-  numOfRooms: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public afAuth: AngularFireAuth, public db: AngularFireDatabase) {
   this.items = db.object('/rooms', { preserveSnapshot: true });
 	  this.items.subscribe(snapshot => {
@@ -21,7 +20,6 @@ export class ListPage {
       for(var i = 0; i < snapshot.val().length; i++){
 	       this.rooms.push(snapshot.val()[i])
       }
-      this.numOfRooms = snapshot.val().value;
 	  });
   }
   createRoom(name){
