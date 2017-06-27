@@ -12,7 +12,7 @@
 </button>
 <div *ngIf='!menuShown'>
   <h1>Groups <a href="#">today.</a></h1>
-  <h2>{{numOfRooms}} groups, Sunday 21 June</h2>
+  <h2>{{numOfRooms}} groups | {{ currentTime | async | date:'longDate' }}</h2>
 
 
   <div class="addbrick">

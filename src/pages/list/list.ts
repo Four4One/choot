@@ -5,6 +5,10 @@ import { HomePage } from '../home/home';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
+
+
+import 'rxjs/add/observable/interval';
+import {Observable} from 'rxjs/Rx';
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
@@ -18,9 +22,11 @@ export class ListPage {
   roomLength: any = 0;
   firstCall: any = true;
   menuShown: any = false;
+  currentTime: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public afAuth: AngularFireAuth, public db: AngularFireDatabase) {
     this.itemsList = db.list('/rooms', { preserveSnapshot: true });
     this.itemsObj = db.object('/rooms', { preserveSnapshot: true });
+    this.currentTime = Observable.interval(1000).map(x => new Date()).share();
     this.rooms = [];
 	  this.checkRooms();
   }
