@@ -1,3 +1,64 @@
 page-list {
-
+	
 }
+
+.bg{
+	background-image: url("http://i.imgur.com/itBvx6Z.gif");
+	background-size: cover;
+}
+
+.facebookLogin{
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	width:40vh;
+	height:10vh;
+	top:75vh;
+	background-color: #1F4788;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 20px;
+}
+
+.loginDetails{
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	top: 84vh;
+	font-size: 12px;
+	color: #BDC3C7;
+}
+
+.loginDetails2{
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	top: 87vh;
+	font-size: 7px;
+	text-decoration: underline;
+	color: #BDC3C7;
+}
+
+.loginIcon{
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 200px;
+	top: 20vh;
+	color: black;
+	opacity: 0.95;
+}
+
+

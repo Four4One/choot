@@ -1,23 +1,52 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>List</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content>
+<button class="specialmenu" menuToggle>
+  <ion-icon name="menu"></ion-icon>
+</button>
+<div *ngIf='!menuShown'>
+  <h1>Groups <a href="#">today.</a></h1>
+  <h2>{{numOfRooms}} groups, Sunday 21 June</h2>
+
+
+  <div class="addbrick">
+
+      <span class="createinput" [hidden]="!createGroup">
+        <ion-icon name="close" style="color: #e74c3c" (click)="toggleInput()"></ion-icon>
+        <input type="text" id="groupname" placeholder="Group Name..." class="creategroup" value='' />
+        <ion-icon name="checkmark" style="color: #2ecc71" (click)="createRoom(); toggleInput();"></ion-icon>
+      </span>
+      <span class="addtext" (click)="toggleInput()" [hidden]="createGroup">
+          <span class="babycircle">
+              <ion-icon name="add"></ion-icon>
+          </span>
+
+          Create Group
+      </span>
+
+
+  </div>
+
+    <br />
+    <span class="sidetext">192</span><div class="slidebrick"><span class="bricktext" (click)='toggleGroupMenu()'>Go to your groups</span></div>
+    <br />
+    <span class="sidetext">520</span><div class="slidebrick"><span class="bricktext">Exploring Sketch</span></div>
+    <br />
+    <br />
+</div>
+<div *ngIf='menuShown'>
+  <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
+    <button ion-item *ngFor="let room of rooms">
+      <ion-icon name="checkmark" style="color: #2ecc71" (click)="createRoom(); toggleInput();"></ion-icon>
+      {{room.name}}
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
-</ion-content>
+  </ion-content>
+</div>

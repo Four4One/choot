@@ -16,12 +16,12 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyAl6pqLSYZbxDlLZ3HPFI4ldVQjx416L2s",
-  authDomain: "choot-95bad.firebaseapp.com",
-  databaseURL: "https://choot-95bad.firebaseio.com",
-  projectId: "choot-95bad",
-  storageBucket: "choot-95bad.appspot.com",
-  messagingSenderId: "1003369088549"
+  apiKey: "AIzaSyAVRWI711PN8EVDHrEJQ6RdWGar6rpxTZ0",
+    authDomain: "choot-fab1d.firebaseapp.com",
+    databaseURL: "https://choot-fab1d.firebaseio.com",
+    projectId: "choot-fab1d",
+    storageBucket: "choot-fab1d.appspot.com",
+    messagingSenderId: "535772069472"
 };
 
 @NgModule({
